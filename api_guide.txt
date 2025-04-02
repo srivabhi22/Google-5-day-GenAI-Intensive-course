@@ -1,0 +1,7 @@
+For accessing the Google AI Studio API key in Kaggle:
+from kaggle_secrets import UserSecretsClient
+GOOGLE_API_KEY = UserSecretsClient().get_secret("GOOGLE_API_KEY")
+
+For accessing the Google AI Studio API key in Google Colab:
+from google.colab import userdata
+GOOGLE_API_KEY = userdata.get('GOOGLE_API_KEY')
